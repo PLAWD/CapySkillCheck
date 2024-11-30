@@ -1,0 +1,246 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    width: 150px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Note Section */
+.note {
+    background-color: #fffbe0;
+    padding: 10px;
+    border: 1px solid #f0e68c;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+/* Filter dropdown and search bar */
+.filter, .search {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#filter-dropdown, #search-bar {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Skill box styling */
+.skill-box {
+    width: 120px;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.skill-box:hover {
+    border-color: #333;
+    transform: scale(1.05);
+}
+
+.skill-box.selected {
+    border-color: #ffc107;
+    background-color: #ffecb3;
+}
+
+.skill-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%; /* Optional: make circular images */
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-box {
+    width: 80px;
+    height: 110px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-box:hover {
+    border-color: #333;
+    transform: scale(1.05);
+}
+
+.skill-box.selected {
+    border-color: #ffc107;
+    background-color: #ffecb3;
+}
+
+.skill-image {
+    width: 25px; /* Smaller image */
+    height: 25px; /* Smaller image */
+    object-fit: contain; /* Ensure the image fits within the size */
+    border-radius: 50%; /* Keep the circular shape */
+    margin-bottom: 1px; /* Space between the image and the text */
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Compare Section */
+.action-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#compare-button,
+#clear-button {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 10px; /* Add spacing between buttons */
+    transition: all 0.3s ease;
+}
+
+#compare-button:hover,
+#clear-button:hover {
+    background-color: #e0a806;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
+
+footer .kofi-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+footer .kofi-link:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 80%; /* Adjust width */
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#modal-close {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#modal-close:hover {
+    background-color: #e0a806;
+}

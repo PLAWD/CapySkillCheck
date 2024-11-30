@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Go! Skill Assist</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <img src="{{ url_for('static', filename='images/capybara-logo.png') }}" alt="Capybara Go! Logo" class="logo">
+            <h1>Skill Assist</h1>
+        </header>
+
+        <!-- Note Section -->
+        <section class="note">
+            <p>
+                <strong>Note:</strong> This picker is good until chapter 50 when your game stats are low.
+                After this point, some skills can become better or worse due to your stats. For example, there
+                is a cap for damage reduction, and when you reach that cap, skills like <strong>Battle-Hardened</strong>
+                and <strong>Hard</strong> become useless.
+            </p>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter">
+            <label for="filter-dropdown">Filter by Type:</label>
+            <select id="filter-dropdown">
+                <option value="All">All</option>
+                <option value="Common">Common</option>
+                <option value="Legendary">Legendary</option>
+                <option value="Mythic">Mythic</option>
+            </select>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search">
+            <label for="search-bar">Search Skills:</label>
+            <input type="text" id="search-bar" placeholder="Search skills by name">
+        </section>
+
+        <!-- Skills Container -->
+        <section class="skills-container" id="skills-container">
+            <!-- Skill boxes will be dynamically added here -->
+        </section>
+
+        <!-- Action Buttons -->
+        <section class="action-buttons">
+            <button id="compare-button">Compare!</button>
+            <button id="clear-button">Clear</button>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="https://ko-fi.com/PLAWD" target="_blank" class="kofi-link">Buy me a Ko-fi!</a></p>
+            <p><a href="https://discord.com/invite/capybarago" target="_blank" class="kofi-link">Join the Capybara Go! Discord</a></p>
+        </footer>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<!-- Modal -->
+<div id="compare-modal" class="modal">
+    <div class="modal-content">
+        <p id="best-skill">Best Skill: <span></span></p>
+        <p id="second-best-skill">2nd Best: <span></span></p>
+        <p id="least-optimal-skill">Least Optimal: <span></span></p>
+        <button id="modal-close">OK</button>
+    </div>
+</div>
+
+</body>
+</html>
